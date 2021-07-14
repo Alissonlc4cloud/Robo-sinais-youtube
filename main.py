@@ -1,6 +1,8 @@
-from iqoptionapi.stable_api import IQ_Option
 
-API = IQ_Option("wmieky.m@vlvstech.com", "12345678")
-API.connect()
-if (API.check_connect()) == True: print("Conectado!")
-else: print("Dados incorretos!")
+from functions import Functions
+# Seguir uma lista de sinais separada por -
+
+api = Functions("wmieky.m@vlvstech.com", "123456789")
+api.conectar()
+api.comprar_digital(4,"EURUSD","put",1)
+#api.comprar_binario(4,"EURUSD","put",1)
